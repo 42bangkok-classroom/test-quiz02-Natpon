@@ -30,10 +30,17 @@ interface DATA {
     company: Company;
 }
 export ansync function getPostalAddress() {
+    try{
     const res = await axios.get("https://jsonplaceholder.typicode.com/users");
     const data = res.data;
-    const D : Output[]=[];
+    /*const D : Output[]=[];
     for(const dd of data){
-        D += dd;
+        D += dd;*/
+           
+    //}
+    if(data.length !== 0){
+        return data:Output;
     }
-    console.log(D);
+    
+}
+}
